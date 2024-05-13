@@ -1,0 +1,36 @@
+public final class dev/zt64/sbkt/SponsorBlockClient : dev/zt64/sbkt/SponsorBlockApi {
+	public fun <init> (Lio/ktor/client/HttpClient;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/ktor/client/engine/HttpClientEngineFactory;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lio/ktor/client/engine/HttpClientEngineFactory;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun createSegment-Re-tU7w (Ljava/lang/String;JJLdev/zt64/sbkt/model/Category;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Service;Lkotlin/time/Duration;Ldev/zt64/sbkt/model/Action;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getLockReason (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getLockReason (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getLockedCategories (Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getPublicUserInfo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getPublicUserStats (Ljava/lang/String;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getRequiredSegments (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getRequiredSegments (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getSavedTimeForUser-3nIYWDw (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getSegmentInfo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getSegmentInfo (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getSegments (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getSegments (Ljava/lang/String;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getServerStatus (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getTopCategoryUsers (Ldev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/SortType;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getTopUsers (Ldev/zt64/sbkt/model/SortType;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getTotalDurationSaved-5sfh64U (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getTotalStats (ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getUserInfo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getUserStats (Ljava/lang/String;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getUsername (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getViewsForUser (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun isUserVip (Ljava/lang/String;)Z
+	public fun searchSegments (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Service;ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun searchUsers (Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun viewSegment (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun vote (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun vote (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Vote;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
