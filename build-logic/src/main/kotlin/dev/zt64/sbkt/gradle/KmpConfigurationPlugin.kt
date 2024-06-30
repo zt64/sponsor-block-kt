@@ -81,12 +81,14 @@ class KmpConfigurationPlugin : Plugin<Project> {
                 description = "Kotlin Multiplatform library for SponsorBlock API"
                 inceptionYear = "2023"
                 url = "https://github.com/$path"
+
                 licenses {
                     license {
                         name = "GPL v3.0"
                         url = "https://www.gnu.org/licenses/gpl-3.0.html"
                     }
                 }
+
                 developers {
                     developer {
                         id = "zt64"
@@ -94,6 +96,7 @@ class KmpConfigurationPlugin : Plugin<Project> {
                         url = "https://zt64.dev"
                     }
                 }
+
                 scm {
                     url = "https://github.com/$path"
                     connection = "scm:git:github.com/$path.git"

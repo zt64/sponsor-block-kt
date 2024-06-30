@@ -131,13 +131,13 @@ public final class dev/zt64/sbkt/model/DaysSaved {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/DaysSaved$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/DaysSaved$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/DaysSaved$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/DaysSaved;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/DaysSaved;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/DaysSaved;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/DaysSaved;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -173,13 +173,13 @@ public final class dev/zt64/sbkt/model/LockReason {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/LockReason$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/LockReason$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/LockReason$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/LockReason;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/LockReason;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/LockReason;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/LockReason;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -203,18 +203,129 @@ public final class dev/zt64/sbkt/model/LockedCategories {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/LockedCategories$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/LockedCategories$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/LockedCategories$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/LockedCategories;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/LockedCategories;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/LockedCategories;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/LockedCategories;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/LockedCategories$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/zt64/sbkt/model/PostgresStats {
+	public static final field Companion Ldev/zt64/sbkt/model/PostgresStats$Companion;
+	public fun <init> (IFFFLdev/zt64/sbkt/model/PostgresStats$Pool;)V
+	public final fun component1 ()I
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun component4 ()F
+	public final fun component5 ()Ldev/zt64/sbkt/model/PostgresStats$Pool;
+	public final fun copy (IFFFLdev/zt64/sbkt/model/PostgresStats$Pool;)Ldev/zt64/sbkt/model/PostgresStats;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/PostgresStats;IFFFLdev/zt64/sbkt/model/PostgresStats$Pool;ILjava/lang/Object;)Ldev/zt64/sbkt/model/PostgresStats;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActiveRequests ()I
+	public final fun getAvgFailedTime ()F
+	public final fun getAvgReadTime ()F
+	public final fun getAvgWriteTime ()F
+	public final fun getPool ()Ldev/zt64/sbkt/model/PostgresStats$Pool;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class dev/zt64/sbkt/model/PostgresStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/zt64/sbkt/model/PostgresStats$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/PostgresStats;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/PostgresStats;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/zt64/sbkt/model/PostgresStats$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/zt64/sbkt/model/PostgresStats$Pool {
+	public static final field Companion Ldev/zt64/sbkt/model/PostgresStats$Pool$Companion;
+	public fun <init> (III)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun copy (III)Ldev/zt64/sbkt/model/PostgresStats$Pool;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/PostgresStats$Pool;IIIILjava/lang/Object;)Ldev/zt64/sbkt/model/PostgresStats$Pool;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIdle ()I
+	public final fun getTotal ()I
+	public final fun getWaiting ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class dev/zt64/sbkt/model/PostgresStats$Pool$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/zt64/sbkt/model/PostgresStats$Pool$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/PostgresStats$Pool;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/PostgresStats$Pool;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/zt64/sbkt/model/PostgresStats$Pool$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/zt64/sbkt/model/RedisStats {
+	public static final field Companion Ldev/zt64/sbkt/model/RedisStats$Companion;
+	public fun <init> (JJDDDDJJJJ)V
+	public final fun component1 ()J
+	public final fun component10 ()J
+	public final fun component2 ()J
+	public final fun component3 ()D
+	public final fun component4 ()D
+	public final fun component5 ()D
+	public final fun component6 ()D
+	public final fun component7 ()J
+	public final fun component8 ()J
+	public final fun component9 ()J
+	public final fun copy (JJDDDDJJJJ)Ldev/zt64/sbkt/model/RedisStats;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/RedisStats;JJDDDDJJJJILjava/lang/Object;)Ldev/zt64/sbkt/model/RedisStats;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActiveRequests ()J
+	public final fun getAvgReadTime ()D
+	public final fun getAvgWriteTime ()D
+	public final fun getLastInvalidation ()J
+	public final fun getLastInvalidationMessage ()J
+	public final fun getMemoryCacheHits ()D
+	public final fun getMemoryCacheLength ()J
+	public final fun getMemoryCacheSize ()J
+	public final fun getMemoryCacheTotalHits ()D
+	public final fun getWriteRequests ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class dev/zt64/sbkt/model/RedisStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Ldev/zt64/sbkt/model/RedisStats$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/RedisStats;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/RedisStats;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class dev/zt64/sbkt/model/RedisStats$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -231,13 +342,13 @@ public final class dev/zt64/sbkt/model/SearchResult {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/SearchResult$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/SearchResult$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/SearchResult$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SearchResult;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SearchResult;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchResult;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchResult;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -261,13 +372,13 @@ public final class dev/zt64/sbkt/model/SearchSegments {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/SearchSegments$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/SearchSegments$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/SearchSegments$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SearchSegments;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SearchSegments;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchSegments;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchSegments;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -279,22 +390,24 @@ public final class dev/zt64/sbkt/model/SearchSegments$Companion {
 public final class dev/zt64/sbkt/model/SearchSegments$Segment {
 	public static final field Companion Ldev/zt64/sbkt/model/SearchSegments$Segment$Companion;
 	public final fun component1 ()F
-	public final fun component10 ()I
+	public final fun component10 ()Ldev/zt64/sbkt/model/Category;
 	public final fun component11 ()I
-	public final fun component12 ()Ldev/zt64/sbkt/model/Action;
+	public final fun component12 ()I
+	public final fun component13 ()Ldev/zt64/sbkt/model/Action;
 	public final fun component2 ()F
 	public final fun component3 ()I
 	public final fun component4 ()I
 	public final fun component5 ()Ljava/lang/String;
 	public final fun component6 ()Ljava/lang/String;
-	public final fun component7 ()J
-	public final fun component8 ()I
-	public final fun component9 ()Ldev/zt64/sbkt/model/Category;
-	public final fun copy (FFIILjava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;IILdev/zt64/sbkt/model/Action;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/SearchSegments$Segment;FFIILjava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;IILdev/zt64/sbkt/model/Action;ILjava/lang/Object;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()J
+	public final fun component9 ()I
+	public final fun copy (FFIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;IILdev/zt64/sbkt/model/Action;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/SearchSegments$Segment;FFIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;IILdev/zt64/sbkt/model/Action;ILjava/lang/Object;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Ldev/zt64/sbkt/model/Action;
 	public final fun getCategory ()Ldev/zt64/sbkt/model/Category;
+	public final fun getDescription ()Ljava/lang/String;
 	public final fun getEndTime ()F
 	public final fun getHidden ()I
 	public final fun getLocked ()I
@@ -309,13 +422,13 @@ public final class dev/zt64/sbkt/model/SearchSegments$Segment {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/SearchSegments$Segment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/SearchSegments$Segment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/SearchSegments$Segment$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchSegments$Segment;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchSegments$Segment;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -351,13 +464,13 @@ public final class dev/zt64/sbkt/model/Segment {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/Segment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/Segment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/Segment$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/Segment;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/Segment;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/Segment;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/Segment;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -415,13 +528,13 @@ public final class dev/zt64/sbkt/model/SegmentInfo {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/SegmentInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/SegmentInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/SegmentInfo$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SegmentInfo;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/SegmentInfo;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SegmentInfo;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SegmentInfo;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -433,21 +546,31 @@ public final class dev/zt64/sbkt/model/SegmentInfo$Companion {
 public final class dev/zt64/sbkt/model/ServerStatus {
 	public static final field Companion Ldev/zt64/sbkt/model/ServerStatus$Companion;
 	public final fun component1 ()F
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ldev/zt64/sbkt/model/PostgresStats;
+	public final fun component12 ()Ldev/zt64/sbkt/model/PostgresStats;
+	public final fun component13 ()Ldev/zt64/sbkt/model/RedisStats;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()I
 	public final fun component4 ()J
 	public final fun component5 ()I
-	public final fun component6 ()Ljava/util/List;
-	public final fun component7 ()I
-	public final fun component8 ()Ljava/lang/String;
-	public final fun copy (FLjava/lang/String;IJILjava/util/List;ILjava/lang/String;)Ldev/zt64/sbkt/model/ServerStatus;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/ServerStatus;FLjava/lang/String;IJILjava/util/List;ILjava/lang/String;ILjava/lang/Object;)Ldev/zt64/sbkt/model/ServerStatus;
+	public final fun component6 ()I
+	public final fun component7 ()Ljava/util/List;
+	public final fun component8 ()I
+	public final fun component9 ()I
+	public final fun copy (FLjava/lang/String;IJIILjava/util/List;IILjava/lang/String;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/RedisStats;)Ldev/zt64/sbkt/model/ServerStatus;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/ServerStatus;FLjava/lang/String;IJIILjava/util/List;IILjava/lang/String;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/RedisStats;ILjava/lang/Object;)Ldev/zt64/sbkt/model/ServerStatus;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCommit ()Ljava/lang/String;
+	public final fun getConnections ()I
 	public final fun getDb ()I
 	public final fun getHostname ()Ljava/lang/String;
 	public final fun getLoadAvg ()Ljava/util/List;
+	public final fun getPostgresPrivateStats ()Ldev/zt64/sbkt/model/PostgresStats;
+	public final fun getPostgresStats ()Ldev/zt64/sbkt/model/PostgresStats;
 	public final fun getProcessTime ()I
+	public final fun getRedisProcessTime ()I
+	public final fun getRedisStats ()Ldev/zt64/sbkt/model/RedisStats;
 	public final fun getStartTime ()J
 	public final fun getStatusRequests ()I
 	public final fun getUptime ()F
@@ -455,13 +578,13 @@ public final class dev/zt64/sbkt/model/ServerStatus {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/ServerStatus$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/ServerStatus$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/ServerStatus$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/ServerStatus;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/ServerStatus;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/ServerStatus;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/ServerStatus;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -508,13 +631,13 @@ public final class dev/zt64/sbkt/model/TopUsers {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/TopUsers$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/TopUsers$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/TopUsers$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/TopUsers;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/TopUsers;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/TopUsers;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/TopUsers;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -544,13 +667,13 @@ public final class dev/zt64/sbkt/model/TotalStats {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/TotalStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/TotalStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/TotalStats$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/TotalStats;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/TotalStats;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/TotalStats;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/TotalStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -593,13 +716,13 @@ public final class dev/zt64/sbkt/model/UserInfo {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/UserInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/UserInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/UserInfo$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserInfo;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserInfo;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserInfo;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserInfo;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -627,13 +750,13 @@ public final class dev/zt64/sbkt/model/UserStats {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/UserStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/UserStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/UserStats$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -644,9 +767,11 @@ public final class dev/zt64/sbkt/model/UserStats$ActionTypeCount {
 	public final fun component2 ()I
 	public final fun component3 ()I
 	public final fun component4 ()I
-	public final fun copy (IIII)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;IIIIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
+	public final fun component5 ()I
+	public final fun copy (IIIII)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;IIIIIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
 	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChapter ()I
 	public final fun getFull ()I
 	public final fun getMute ()I
 	public final fun getPoi ()I
@@ -655,13 +780,13 @@ public final class dev/zt64/sbkt/model/UserStats$ActionTypeCount {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/UserStats$ActionTypeCount$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/UserStats$ActionTypeCount$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/UserStats$ActionTypeCount$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -674,6 +799,7 @@ public final class dev/zt64/sbkt/model/UserStats$CategoryCount {
 	public static final field Companion Ldev/zt64/sbkt/model/UserStats$CategoryCount$Companion;
 	public final fun component1 ()I
 	public final fun component10 ()I
+	public final fun component11 ()I
 	public final fun component2 ()I
 	public final fun component3 ()I
 	public final fun component4 ()I
@@ -682,9 +808,10 @@ public final class dev/zt64/sbkt/model/UserStats$CategoryCount {
 	public final fun component7 ()I
 	public final fun component8 ()I
 	public final fun component9 ()I
-	public final fun copy (IIIIIIIIII)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$CategoryCount;IIIIIIIIIIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
+	public final fun copy (IIIIIIIIIII)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
+	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$CategoryCount;IIIIIIIIIIIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
 	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChapter ()I
 	public final fun getExclusiveAccess ()I
 	public final fun getFiller ()I
 	public final fun getInteraction ()I
@@ -699,13 +826,13 @@ public final class dev/zt64/sbkt/model/UserStats$CategoryCount {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/UserStats$CategoryCount$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/UserStats$CategoryCount$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/UserStats$CategoryCount$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$CategoryCount;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$CategoryCount;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -731,13 +858,13 @@ public final class dev/zt64/sbkt/model/UserStats$OverallStats {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/UserStats$OverallStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/UserStats$OverallStats$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/UserStats$OverallStats$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats$OverallStats;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/UserStats$OverallStats;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$OverallStats;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$OverallStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
@@ -757,13 +884,13 @@ public final class dev/zt64/sbkt/model/ViewsForUser {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class dev/zt64/sbkt/model/ViewsForUser$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public synthetic class dev/zt64/sbkt/model/ViewsForUser$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/sbkt/model/ViewsForUser$$serializer;
-	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
-	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/ViewsForUser;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/sbkt/model/ViewsForUser;
 	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
-	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
-	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/ViewsForUser;)V
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/ViewsForUser;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
 	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }

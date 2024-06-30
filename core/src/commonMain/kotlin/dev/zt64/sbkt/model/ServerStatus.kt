@@ -32,7 +32,7 @@ public data class ServerStatus internal constructor(
 )
 
 @Serializable
-public data class PostgresStats(
+public data class PostgresStats internal constructor(
     val activeRequests: Int,
     val avgReadTime: Float,
     val avgWriteTime: Float,
@@ -40,7 +40,7 @@ public data class PostgresStats(
     val pool: Pool
 ) {
     @Serializable
-    public data class Pool(
+    public data class Pool internal constructor(
         val total: Int,
         val idle: Int,
         val waiting: Int
@@ -48,7 +48,7 @@ public data class PostgresStats(
 }
 
 @Serializable
-public data class RedisStats(
+public data class RedisStats internal constructor(
     val activeRequests: Long,
     val writeRequests: Long,
     val avgReadTime: Double,
