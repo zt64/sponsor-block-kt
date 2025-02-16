@@ -3,6 +3,15 @@ package dev.zt64.sbkt.model
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * User statistics.
+ *
+ * @property userId Public ID of the user
+ * @property username Username of the user
+ * @property overallStats Overall statistics of the user
+ * @property categoryCount Number of segments per category, only present if requested with `fetchCategoryStats`
+ * @property actionTypeCount Number of segments per type, only present if requested with `fetchActionTypeStats`
+ */
 @Serializable
 public data class UserStats internal constructor(
     @SerialName("userID")
@@ -13,6 +22,12 @@ public data class UserStats internal constructor(
     val categoryCount: CategoryCount? = null,
     val actionTypeCount: ActionTypeCount? = null
 ) {
+    /**
+     * Overall statistics.
+     *
+     * @property minutesSaved Minutes saved by the user
+     * @property segmentCount Number of segments
+     */
     @Serializable
     public data class OverallStats internal constructor(
         val minutesSaved: Float,
@@ -20,7 +35,19 @@ public data class UserStats internal constructor(
     )
 
     /**
-     * Number of segments per category
+     * Number of segments per category.
+     *
+     * @property sponsor Number of sponsor segments
+     * @property intro Number of intro segments
+     * @property outro Number of outro segments
+     * @property interaction Number of interaction segments
+     * @property selfPromo Number of self-promo segments
+     * @property musicOffTopic Number of off-topic music segments
+     * @property preview Number of preview segments
+     * @property poiHighlight Number of point-of-interest highlight segments
+     * @property filler Number of filler segments
+     * @property exclusiveAccess Number of exclusive access segments
+     * @property chapter Number of chapter segments
      */
     @Serializable
     public data class CategoryCount internal constructor(
@@ -42,7 +69,13 @@ public data class UserStats internal constructor(
     )
 
     /**
-     * Number of segments per type
+     * Number of segments per type.
+     *
+     * @property skip Number of skip segments
+     * @property mute Number of mute segments
+     * @property full Number of full segments
+     * @property poi Number of point-of-interest segments
+     * @property chapter Number of chapter segments
      */
     @Serializable
     public data class ActionTypeCount internal constructor(

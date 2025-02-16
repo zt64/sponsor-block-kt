@@ -4,6 +4,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
+ * The reason for a lock.
+ *
  * @property category Category of lock
  * @property locked Status of lock
  * @property reason Reason for lock

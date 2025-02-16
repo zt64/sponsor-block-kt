@@ -5,7 +5,7 @@ import dev.zt64.sbkt.model.*
 /**
  * API for VIP users.
  */
-public interface VipApi : BaseApi {
+public interface VipApi : UserApi {
     /**
      * Create a category lock on the video, disallowing further submissions for that category
      *
@@ -25,10 +25,7 @@ public interface VipApi : BaseApi {
      * @param videoId
      * @param categories
      */
-    public fun deleteCategoryLock(
-        videoId: String,
-        categories: List<Category>
-    )
+    public fun deleteCategoryLock(videoId: String, categories: List<Category>)
 
     /**
      * Shadow-ban a user
@@ -58,10 +55,7 @@ public interface VipApi : BaseApi {
      * @param userId Public user ID of the user to warn
      * @param reason The reason for the warning
      */
-    public fun warnUser(
-        userId: String,
-        reason: String? = null
-    )
+    public fun warnUser(userId: String, reason: String? = null)
 
     /**
      * Remove a warning from a user
@@ -76,47 +70,37 @@ public interface VipApi : BaseApi {
      * @param userId The local user ID of the VIP user
      * @param videoId The video ID to clear the cache for
      */
-    public fun clearCache(
-        userId: String,
-        videoId: String
-    )
+    public fun clearCache(userId: String, videoId: String)
 
     /**
      * Purge all segments from the cache
      *
      * @param videoId The video ID to purge all segments for
      */
-    public fun purgeAllSegments(
-        videoId: String,
-        service: Service
-    )
+    public fun purgeAllSegments(videoId: String, service: Service)
 
     /**
      * Shift all segments on a video
      */
-    public fun segmentShift(
-        videoId: String,
-        startTime: Float,
-        endTime: Float
-    )
+    public fun segmentShift(videoId: String, startTime: Float, endTime: Float)
 
-    public fun addUserAsTempVIP(
-        userId: String,
-        channelVideoId: String
-    )
+    public fun addUserAsTempVIP(userId: String, channelVideoId: String)
 
-    public fun removeUserAsTempVIP(
-        userId: String,
-        channelVideoId: String
-    )
+    public fun removeUserAsTempVIP(userId: String, channelVideoId: String)
 
-    public fun enableUserFeature(
-        userId: String,
-        feature: Feature
-    )
+    /**
+     * Enable a feature for a user
+     *
+     * @param userId the user for whom to enable the feature for
+     * @param feature the feature to enable
+     */
+    public fun enableUserFeature(userId: String, feature: Feature)
 
-    public fun disableUserFeature(
-        userId: String,
-        feature: Feature
-    )
+    /**
+     * Disable a feature for a user
+     *
+     * @param userId the user for whom to disable the feature for
+     * @param feature the feature to enable
+     */
+    public fun disableUserFeature(userId: String, feature: Feature)
 }

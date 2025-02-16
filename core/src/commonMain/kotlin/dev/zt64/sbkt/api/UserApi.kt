@@ -1,51 +1,87 @@
 package dev.zt64.sbkt.api
 
+import dev.zt64.sbkt.model.*
+import kotlin.time.Duration
+
 /**
- * API for users. Requires user id
- *
+ * API for authenticated users. Requires a user ID.
+ * Extends [GuestApi] to provide additional functionality for authenticated users.
  */
-public interface UserApi : BaseApi {
+public interface UserApi : GuestApi {
     /**
-     * Upvote a segment
-     *
-     * @param userId Local user ID
-     * @param segmentId
+     * The unique identifier for the authenticated user.
      */
-    public fun upvoteSegment(
-        userId: String,
-        segmentId: String
+    public val userId: String
+
+    /**
+     * Creates a new segment on a video.
+     *
+     * @param videoId The unique identifier of the video.
+     * @param startTime The starting time of the segment.
+     * @param endTime The ending time of the segment.
+     * @param category The category of the segment, such as [Category.SPONSOR].
+     * @param userAgent The client identifier in the format `"Name of Client/Version"` or `"[BOT] Name of Bot/Version"`,
+     *                  e.g., `"Chromium/1.0.0"`. Defaults to `"SponsorBlockKT/"`.
+     * @param service The platform where the video is hosted, defaulting to [Service.YOUTUBE].
+     * @param videoDuration The total duration of the video. If omitted, it will attempt to be retrieved from the YouTube API.
+     *                      This is used to determine if a submission is outdated.
+     * @param action The action to be taken when reaching the segment, defaulting to [Action.SKIP].
+     */
+    public suspend fun createSegment(
+        videoId: String,
+        startTime: Duration,
+        endTime: Duration,
+        category: Category,
+        userAgent: String = "SponsorBlockKT/",
+        service: Service = Service.YOUTUBE,
+        videoDuration: Duration? = null,
+        action: Action = Action.SKIP
     )
 
     /**
-     * Downvote a segment
+     * Votes on a segment.
      *
-     * @param userId Local user ID
-     * @param segmentId
+     * @param uuid The unique identifier of the segment.
+     * @param type The type of vote to apply, e.g., [Vote.UPVOTE] or [Vote.DOWNVOTE].
      */
-    public fun downvoteSegment(
-        userId: String,
-        segmentId: String
-    )
+    public suspend fun vote(uuid: String, type: Vote)
 
     /**
-     * Undo a vote on a segment
+     * Votes to change the category of a segment.
      *
-     * @param userId Local user ID
-     * @param segmentId
+     * @param uuid The unique identifier of the segment.
+     * @param category The new category to assign to the segment.
      */
-    public fun undoVote(
-        userId: String,
-        segmentId: String
-    )
+    public suspend fun vote(uuid: String, category: Category)
 
     /**
-     * Set the username for a user
+     * Upvotes a segment.
      *
-     * @param userId Local user ID
-     * @param username The username to set
+     * @param userId The local user ID.
+     * @param segmentId The unique identifier of the segment.
      */
-    public fun setUsername(
-        userId: String,
-        username: String
-    )
+    public suspend fun upvoteSegment(userId: String, segmentId: String)
+
+    /**
+     * Downvotes a segment.
+     *
+     * @param userId The local user ID.
+     * @param segmentId The unique identifier of the segment.
+     */
+    public suspend fun downvoteSegment(userId: String, segmentId: String)
+
+    /**
+     * Undoes a vote on a segment.
+     *
+     * @param userId The local user ID.
+     * @param segmentId The unique identifier of the segment.
+     */
+    public suspend fun undoVote(userId: String, segmentId: String)
+
+    /**
+     * Sets the username for the authenticated user.
+     *
+     * @param username The new username to assign to the user.
+     */
+    public suspend fun setUsername(username: String)
 }

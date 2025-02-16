@@ -1,21 +1,15 @@
-public abstract interface class dev/zt64/sbkt/SponsorBlockApi : dev/zt64/sbkt/api/BaseApi {
-}
-
-public abstract interface class dev/zt64/sbkt/api/AdminApi : dev/zt64/sbkt/api/BaseApi {
+public abstract interface class dev/zt64/sbkt/api/AdminApi : dev/zt64/sbkt/api/VipApi {
 	public abstract fun disableUserVip (Ljava/lang/String;)V
 	public abstract fun enableUserVip (Ljava/lang/String;)V
-	public abstract fun setUsername (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public abstract fun setUsername (Ljava/lang/String;Ljava/lang/String;)V
 }
 
-public abstract interface class dev/zt64/sbkt/api/BaseApi {
-	public abstract fun createSegment-Re-tU7w (Ljava/lang/String;JJLdev/zt64/sbkt/model/Category;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Service;Lkotlin/time/Duration;Ldev/zt64/sbkt/model/Action;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+public abstract interface class dev/zt64/sbkt/api/GuestApi {
 	public abstract fun getLockReason (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getLockReason (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getLockedCategories (Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getPublicUserInfo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getPublicUserStats (Ljava/lang/String;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun getRequiredSegments (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun getRequiredSegments (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getSavedTimeForUser-3nIYWDw (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getSegmentInfo (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getSegmentInfo (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -30,39 +24,41 @@ public abstract interface class dev/zt64/sbkt/api/BaseApi {
 	public abstract fun getUserStats (Ljava/lang/String;ZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getUsername (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getViewsForUser (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun isUserVip (Ljava/lang/String;)Z
 	public abstract fun searchSegments (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Service;ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun searchUsers (Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun viewSegment (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun vote (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun vote (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Vote;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public final class dev/zt64/sbkt/api/BaseApi$DefaultImpls {
-	public static synthetic fun createSegment-Re-tU7w$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;JJLdev/zt64/sbkt/model/Category;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Service;Lkotlin/time/Duration;Ldev/zt64/sbkt/model/Action;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getLockReason$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getLockedCategories$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getPublicUserStats$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getRequiredSegments$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getRequiredSegments$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getSegments$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getSegments$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getTopCategoryUsers$default (Ldev/zt64/sbkt/api/BaseApi;Ldev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/SortType;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getTopUsers$default (Ldev/zt64/sbkt/api/BaseApi;Ldev/zt64/sbkt/model/SortType;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getTotalStats$default (Ldev/zt64/sbkt/api/BaseApi;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun getUserStats$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun searchSegments$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Service;ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-	public static synthetic fun searchUsers$default (Ldev/zt64/sbkt/api/BaseApi;Ljava/lang/String;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+public final class dev/zt64/sbkt/api/GuestApi$DefaultImpls {
+	public static synthetic fun getLockReason$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getLockedCategories$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getPublicUserStats$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getSegments$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getSegments$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;Ljava/util/List;Ldev/zt64/sbkt/model/Action;Ldev/zt64/sbkt/model/Service;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getTopCategoryUsers$default (Ldev/zt64/sbkt/api/GuestApi;Ldev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/SortType;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getTopUsers$default (Ldev/zt64/sbkt/api/GuestApi;Ldev/zt64/sbkt/model/SortType;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getTotalStats$default (Ldev/zt64/sbkt/api/GuestApi;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun getUserStats$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;ZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun searchSegments$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ldev/zt64/sbkt/model/Service;ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ZZZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun searchUsers$default (Ldev/zt64/sbkt/api/GuestApi;Ljava/lang/String;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
-public abstract interface class dev/zt64/sbkt/api/UserApi : dev/zt64/sbkt/api/BaseApi {
-	public abstract fun downvoteSegment (Ljava/lang/String;Ljava/lang/String;)V
-	public abstract fun setUsername (Ljava/lang/String;Ljava/lang/String;)V
-	public abstract fun undoVote (Ljava/lang/String;Ljava/lang/String;)V
-	public abstract fun upvoteSegment (Ljava/lang/String;Ljava/lang/String;)V
+public abstract interface class dev/zt64/sbkt/api/UserApi : dev/zt64/sbkt/api/GuestApi {
+	public abstract fun createSegment-9WfZ6CI (Ljava/lang/String;JJLdev/zt64/sbkt/model/Category;Ljava/lang/String;Ldev/zt64/sbkt/model/Service;Lkotlin/time/Duration;Ldev/zt64/sbkt/model/Action;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun downvoteSegment (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getUserId ()Ljava/lang/String;
+	public abstract fun setUsername (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun undoVote (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun upvoteSegment (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun vote (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun vote (Ljava/lang/String;Ldev/zt64/sbkt/model/Vote;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public abstract interface class dev/zt64/sbkt/api/VipApi : dev/zt64/sbkt/api/BaseApi {
+public final class dev/zt64/sbkt/api/UserApi$DefaultImpls {
+	public static synthetic fun createSegment-9WfZ6CI$default (Ldev/zt64/sbkt/api/UserApi;Ljava/lang/String;JJLdev/zt64/sbkt/model/Category;Ljava/lang/String;Ldev/zt64/sbkt/model/Service;Lkotlin/time/Duration;Ldev/zt64/sbkt/model/Action;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public abstract interface class dev/zt64/sbkt/api/VipApi : dev/zt64/sbkt/api/UserApi {
 	public abstract fun addUserAsTempVIP (Ljava/lang/String;Ljava/lang/String;)V
 	public abstract fun clearCache (Ljava/lang/String;Ljava/lang/String;)V
 	public abstract fun createCategoryLock (Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
@@ -121,13 +117,7 @@ public final class dev/zt64/sbkt/model/Category$Companion {
 
 public final class dev/zt64/sbkt/model/DaysSaved {
 	public static final field Companion Ldev/zt64/sbkt/model/DaysSaved$Companion;
-	public final fun component1 ()F
-	public final fun copy (F)Ldev/zt64/sbkt/model/DaysSaved;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/DaysSaved;FILjava/lang/Object;)Ldev/zt64/sbkt/model/DaysSaved;
-	public fun equals (Ljava/lang/Object;)Z
 	public final fun getDaysSaved ()F
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
 }
 
 public synthetic class dev/zt64/sbkt/model/DaysSaved$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
@@ -138,7 +128,6 @@ public synthetic class dev/zt64/sbkt/model/DaysSaved$$serializer : kotlinx/seria
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/DaysSaved;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/DaysSaved$Companion {
@@ -160,8 +149,6 @@ public final class dev/zt64/sbkt/model/LockReason {
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()Ljava/lang/String;
 	public final fun component5 ()Ljava/lang/String;
-	public final fun copy (Ldev/zt64/sbkt/model/Category;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ldev/zt64/sbkt/model/LockReason;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/LockReason;Ldev/zt64/sbkt/model/Category;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/zt64/sbkt/model/LockReason;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Ldev/zt64/sbkt/model/Category;
 	public final fun getLocked ()I
@@ -180,7 +167,6 @@ public synthetic class dev/zt64/sbkt/model/LockReason$$serializer : kotlinx/seri
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/LockReason;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/LockReason$Companion {
@@ -192,8 +178,6 @@ public final class dev/zt64/sbkt/model/LockedCategories {
 	public final fun component1 ()Ljava/util/List;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/util/List;
-	public final fun copy (Ljava/util/List;Ljava/lang/String;Ljava/util/List;)Ldev/zt64/sbkt/model/LockedCategories;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/LockedCategories;Ljava/util/List;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Ldev/zt64/sbkt/model/LockedCategories;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getActionTypes ()Ljava/util/List;
 	public final fun getCategories ()Ljava/util/List;
@@ -210,7 +194,6 @@ public synthetic class dev/zt64/sbkt/model/LockedCategories$$serializer : kotlin
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/LockedCategories;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/LockedCategories$Companion {
@@ -224,8 +207,6 @@ public final class dev/zt64/sbkt/model/PostgresStats {
 	public final fun component3 ()F
 	public final fun component4 ()F
 	public final fun component5 ()Ldev/zt64/sbkt/model/PostgresStats$Pool;
-	public final fun copy (IFFFLdev/zt64/sbkt/model/PostgresStats$Pool;)Ldev/zt64/sbkt/model/PostgresStats;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/PostgresStats;IFFFLdev/zt64/sbkt/model/PostgresStats$Pool;ILjava/lang/Object;)Ldev/zt64/sbkt/model/PostgresStats;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getActiveRequests ()I
 	public final fun getAvgFailedTime ()F
@@ -244,7 +225,6 @@ public synthetic class dev/zt64/sbkt/model/PostgresStats$$serializer : kotlinx/s
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/PostgresStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/PostgresStats$Companion {
@@ -256,8 +236,6 @@ public final class dev/zt64/sbkt/model/PostgresStats$Pool {
 	public final fun component1 ()I
 	public final fun component2 ()I
 	public final fun component3 ()I
-	public final fun copy (III)Ldev/zt64/sbkt/model/PostgresStats$Pool;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/PostgresStats$Pool;IIIILjava/lang/Object;)Ldev/zt64/sbkt/model/PostgresStats$Pool;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getIdle ()I
 	public final fun getTotal ()I
@@ -274,7 +252,6 @@ public synthetic class dev/zt64/sbkt/model/PostgresStats$Pool$$serializer : kotl
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/PostgresStats$Pool;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/PostgresStats$Pool$Companion {
@@ -293,8 +270,6 @@ public final class dev/zt64/sbkt/model/RedisStats {
 	public final fun component7 ()J
 	public final fun component8 ()J
 	public final fun component9 ()J
-	public final fun copy (JJDDDDJJJJ)Ldev/zt64/sbkt/model/RedisStats;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/RedisStats;JJDDDDJJJJILjava/lang/Object;)Ldev/zt64/sbkt/model/RedisStats;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getActiveRequests ()J
 	public final fun getAvgReadTime ()D
@@ -318,7 +293,6 @@ public synthetic class dev/zt64/sbkt/model/RedisStats$$serializer : kotlinx/seri
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/RedisStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/RedisStats$Companion {
@@ -329,8 +303,6 @@ public final class dev/zt64/sbkt/model/SearchResult {
 	public static final field Companion Ldev/zt64/sbkt/model/SearchResult$Companion;
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Ldev/zt64/sbkt/model/SearchResult;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/SearchResult;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/zt64/sbkt/model/SearchResult;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getUserId ()Ljava/lang/String;
 	public final fun getUsername ()Ljava/lang/String;
@@ -346,7 +318,6 @@ public synthetic class dev/zt64/sbkt/model/SearchResult$$serializer : kotlinx/se
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchResult;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/SearchResult$Companion {
@@ -358,8 +329,6 @@ public final class dev/zt64/sbkt/model/SearchSegments {
 	public final fun component1 ()I
 	public final fun component2 ()I
 	public final fun component3 ()Ljava/util/List;
-	public final fun copy (IILjava/util/List;)Ldev/zt64/sbkt/model/SearchSegments;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/SearchSegments;IILjava/util/List;ILjava/lang/Object;)Ldev/zt64/sbkt/model/SearchSegments;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getPage ()I
 	public final fun getSegmentCount ()I
@@ -376,7 +345,6 @@ public synthetic class dev/zt64/sbkt/model/SearchSegments$$serializer : kotlinx/
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchSegments;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/SearchSegments$Companion {
@@ -398,8 +366,6 @@ public final class dev/zt64/sbkt/model/SearchSegments$Segment {
 	public final fun component7 ()Ljava/lang/String;
 	public final fun component8 ()J
 	public final fun component9 ()I
-	public final fun copy (FFIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;IILdev/zt64/sbkt/model/Action;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/SearchSegments$Segment;FFIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;IILdev/zt64/sbkt/model/Action;ILjava/lang/Object;)Ldev/zt64/sbkt/model/SearchSegments$Segment;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Ldev/zt64/sbkt/model/Action;
 	public final fun getCategory ()Ldev/zt64/sbkt/model/Category;
@@ -426,7 +392,6 @@ public synthetic class dev/zt64/sbkt/model/SearchSegments$Segment$$serializer : 
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SearchSegments$Segment;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/SearchSegments$Segment$Companion {
@@ -440,19 +405,15 @@ public final class dev/zt64/sbkt/model/Segment {
 	public final fun component3 ()Ldev/zt64/sbkt/model/Category;
 	public final fun component4 ()F
 	public final fun component5 ()Ldev/zt64/sbkt/model/Action;
-	public final fun component6 ()Ljava/lang/String;
+	public final fun component6 ()I
 	public final fun component7 ()I
-	public final fun component8 ()I
-	public final fun component9 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/util/List;Ldev/zt64/sbkt/model/Category;FLdev/zt64/sbkt/model/Action;Ljava/lang/String;IILjava/lang/String;)Ldev/zt64/sbkt/model/Segment;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/Segment;Ljava/lang/String;Ljava/util/List;Ldev/zt64/sbkt/model/Category;FLdev/zt64/sbkt/model/Action;Ljava/lang/String;IILjava/lang/String;ILjava/lang/Object;)Ldev/zt64/sbkt/model/Segment;
+	public final fun component8 ()Ljava/lang/String;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Ldev/zt64/sbkt/model/Action;
 	public final fun getCategory ()Ldev/zt64/sbkt/model/Category;
 	public final fun getDescription ()Ljava/lang/String;
 	public final fun getLocked ()I
 	public final fun getSegment ()Ljava/util/List;
-	public final fun getUserId ()Ljava/lang/String;
 	public final fun getUuid ()Ljava/lang/String;
 	public final fun getVideoDuration ()F
 	public final fun getVotes ()I
@@ -468,7 +429,6 @@ public synthetic class dev/zt64/sbkt/model/Segment$$serializer : kotlinx/seriali
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/Segment;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/Segment$Companion {
@@ -497,8 +457,6 @@ public final class dev/zt64/sbkt/model/SegmentInfo {
 	public final fun component7 ()I
 	public final fun component8 ()Ljava/lang/String;
 	public final fun component9 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;FFIIILjava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/Service;IIIILjava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Action;)Ldev/zt64/sbkt/model/SegmentInfo;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/SegmentInfo;Ljava/lang/String;Ljava/lang/String;FFIIILjava/lang/String;Ljava/lang/String;JILdev/zt64/sbkt/model/Category;Ldev/zt64/sbkt/model/Service;IIIILjava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Action;ILjava/lang/Object;)Ldev/zt64/sbkt/model/SegmentInfo;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Ldev/zt64/sbkt/model/Action;
 	public final fun getCategory ()Ldev/zt64/sbkt/model/Category;
@@ -532,7 +490,6 @@ public synthetic class dev/zt64/sbkt/model/SegmentInfo$$serializer : kotlinx/ser
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/SegmentInfo;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/SegmentInfo$Companion {
@@ -554,8 +511,6 @@ public final class dev/zt64/sbkt/model/ServerStatus {
 	public final fun component7 ()Ljava/util/List;
 	public final fun component8 ()I
 	public final fun component9 ()I
-	public final fun copy (FLjava/lang/String;IJIILjava/util/List;IILjava/lang/String;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/RedisStats;)Ldev/zt64/sbkt/model/ServerStatus;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/ServerStatus;FLjava/lang/String;IJIILjava/util/List;IILjava/lang/String;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/PostgresStats;Ldev/zt64/sbkt/model/RedisStats;ILjava/lang/Object;)Ldev/zt64/sbkt/model/ServerStatus;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCommit ()Ljava/lang/String;
 	public final fun getConnections ()I
@@ -582,7 +537,6 @@ public synthetic class dev/zt64/sbkt/model/ServerStatus$$serializer : kotlinx/se
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/ServerStatus;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/ServerStatus$Companion {
@@ -616,8 +570,6 @@ public final class dev/zt64/sbkt/model/TopUsers {
 	public final fun component2 ()Ljava/util/List;
 	public final fun component3 ()Ljava/util/List;
 	public final fun component4 ()Ljava/util/List;
-	public final fun copy (Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)Ldev/zt64/sbkt/model/TopUsers;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/TopUsers;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/zt64/sbkt/model/TopUsers;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getMinutesSaved ()Ljava/util/List;
 	public final fun getTotalSubmissions ()Ljava/util/List;
@@ -635,7 +587,6 @@ public synthetic class dev/zt64/sbkt/model/TopUsers$$serializer : kotlinx/serial
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/TopUsers;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/TopUsers$Companion {
@@ -650,8 +601,6 @@ public final class dev/zt64/sbkt/model/TotalStats {
 	public final fun component4 ()I
 	public final fun component5 ()I
 	public final fun component6 ()F
-	public final fun copy (IIIIIF)Ldev/zt64/sbkt/model/TotalStats;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/TotalStats;IIIIIFILjava/lang/Object;)Ldev/zt64/sbkt/model/TotalStats;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getActiveUsers ()I
 	public final fun getApiUsers ()I
@@ -671,7 +620,6 @@ public synthetic class dev/zt64/sbkt/model/TotalStats$$serializer : kotlinx/seri
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/TotalStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/TotalStats$Companion {
@@ -720,7 +668,6 @@ public synthetic class dev/zt64/sbkt/model/UserInfo$$serializer : kotlinx/serial
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserInfo;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/UserInfo$Companion {
@@ -734,8 +681,6 @@ public final class dev/zt64/sbkt/model/UserStats {
 	public final fun component3 ()Ldev/zt64/sbkt/model/UserStats$OverallStats;
 	public final fun component4 ()Ldev/zt64/sbkt/model/UserStats$CategoryCount;
 	public final fun component5 ()Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/UserStats$OverallStats;Ldev/zt64/sbkt/model/UserStats$CategoryCount;Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;)Ldev/zt64/sbkt/model/UserStats;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats;Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/UserStats$OverallStats;Ldev/zt64/sbkt/model/UserStats$CategoryCount;Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;ILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getActionTypeCount ()Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
 	public final fun getCategoryCount ()Ldev/zt64/sbkt/model/UserStats$CategoryCount;
@@ -754,7 +699,6 @@ public synthetic class dev/zt64/sbkt/model/UserStats$$serializer : kotlinx/seria
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/UserStats$ActionTypeCount {
@@ -764,8 +708,6 @@ public final class dev/zt64/sbkt/model/UserStats$ActionTypeCount {
 	public final fun component3 ()I
 	public final fun component4 ()I
 	public final fun component5 ()I
-	public final fun copy (IIIII)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;IIIIIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChapter ()I
 	public final fun getFull ()I
@@ -784,7 +726,6 @@ public synthetic class dev/zt64/sbkt/model/UserStats$ActionTypeCount$$serializer
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$ActionTypeCount;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/UserStats$ActionTypeCount$Companion {
@@ -804,8 +745,6 @@ public final class dev/zt64/sbkt/model/UserStats$CategoryCount {
 	public final fun component7 ()I
 	public final fun component8 ()I
 	public final fun component9 ()I
-	public final fun copy (IIIIIIIIIII)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$CategoryCount;IIIIIIIIIIIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$CategoryCount;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChapter ()I
 	public final fun getExclusiveAccess ()I
@@ -830,7 +769,6 @@ public synthetic class dev/zt64/sbkt/model/UserStats$CategoryCount$$serializer :
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$CategoryCount;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/UserStats$CategoryCount$Companion {
@@ -845,8 +783,6 @@ public final class dev/zt64/sbkt/model/UserStats$OverallStats {
 	public static final field Companion Ldev/zt64/sbkt/model/UserStats$OverallStats$Companion;
 	public final fun component1 ()F
 	public final fun component2 ()I
-	public final fun copy (FI)Ldev/zt64/sbkt/model/UserStats$OverallStats;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/UserStats$OverallStats;FIILjava/lang/Object;)Ldev/zt64/sbkt/model/UserStats$OverallStats;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getMinutesSaved ()F
 	public final fun getSegmentCount ()I
@@ -862,7 +798,6 @@ public synthetic class dev/zt64/sbkt/model/UserStats$OverallStats$$serializer : 
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/UserStats$OverallStats;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/UserStats$OverallStats$Companion {
@@ -872,8 +807,6 @@ public final class dev/zt64/sbkt/model/UserStats$OverallStats$Companion {
 public final class dev/zt64/sbkt/model/ViewsForUser {
 	public static final field Companion Ldev/zt64/sbkt/model/ViewsForUser$Companion;
 	public final fun component1 ()I
-	public final fun copy (I)Ldev/zt64/sbkt/model/ViewsForUser;
-	public static synthetic fun copy$default (Ldev/zt64/sbkt/model/ViewsForUser;IILjava/lang/Object;)Ldev/zt64/sbkt/model/ViewsForUser;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getViewCount ()I
 	public fun hashCode ()I
@@ -888,7 +821,6 @@ public synthetic class dev/zt64/sbkt/model/ViewsForUser$$serializer : kotlinx/se
 	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
 	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Ldev/zt64/sbkt/model/ViewsForUser;)V
 	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
-	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
 }
 
 public final class dev/zt64/sbkt/model/ViewsForUser$Companion {

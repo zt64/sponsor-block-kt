@@ -3,11 +3,13 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+description = "Kotlin multiplatform client for SponsorBlock"
+
 kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.core)
+                api(projects.core)
 
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.contentNegotiation)

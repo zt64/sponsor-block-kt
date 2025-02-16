@@ -3,7 +3,7 @@ package dev.zt64.sbkt.api
 /**
  * API for admin users.
  */
-public interface AdminApi : BaseApi {
+public interface AdminApi : VipApi {
     /**
      * Enable VIP status for a user
      *
@@ -22,12 +22,7 @@ public interface AdminApi : BaseApi {
      * Set the username for a user
      *
      * @param userId The public user ID
-     * @param username
-     * @param adminUserId
+     * @param username the new username
      */
-    public fun setUsername(
-        userId: String,
-        username: String,
-        adminUserId: String
-    )
+    public fun setUsername(userId: String, username: String)
 }
