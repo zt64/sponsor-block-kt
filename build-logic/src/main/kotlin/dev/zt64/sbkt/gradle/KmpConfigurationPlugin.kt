@@ -12,7 +12,6 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsSubTargetDsl
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsTargetDsl
 import org.jlleitschuh.gradle.ktlint.KtlintExtension
@@ -31,7 +30,7 @@ class KmpConfigurationPlugin : Plugin<Project> {
         configureMaintenance(target)
     }
 
-    @OptIn(ExperimentalWasmDsl::class)
+    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
     private fun configureKmp(target: Project) {
         target.apply(plugin = "org.jetbrains.kotlin.multiplatform")
         target.extensions.configure<KotlinMultiplatformExtension> {
@@ -67,6 +66,10 @@ class KmpConfigurationPlugin : Plugin<Project> {
             }
 
             apple()
+
+            compilerOptions {
+                freeCompilerArgs.add("-Xconsistent-data-class-copy-visibility")
+            }
 
             sourceSets.apply {
                 commonMain {
