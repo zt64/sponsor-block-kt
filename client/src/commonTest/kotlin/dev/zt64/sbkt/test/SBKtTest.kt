@@ -5,24 +5,24 @@ import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 
 private val VIDEO_IDS = listOf(
-    "dQw4w9WgXcQ"
+    "Qnauk0wEerQ"
 )
 
 private const val USER_ID = "3thSw8sqkofwfd7uS0ArRvhMuu0rb0HRLNTK"
 
 class SBKtTest {
-    private val client: SponsorBlockClient by lazy { SponsorBlockClient() }
+    private val client by lazy { SponsorBlockClient() }
 
     @Test
     fun testServerStatus() = runTest {
-        client.getServerStatus()
+        println(client.getServerStatus())
     }
 
     // API takes way too long and causes test to fail because of timeout
-    // @Test
-    // fun testTotalDurationSaved() = runTest {
-    //     client.getTotalDurationSaved()
-    // }
+    @Test
+    fun testTotalDurationSaved() = runTest {
+        client.getTotalDurationSaved()
+    }
 
     @Test
     fun testSkipSegments() = runTest {
