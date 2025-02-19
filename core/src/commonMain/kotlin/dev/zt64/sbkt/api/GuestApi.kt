@@ -50,7 +50,7 @@ public interface GuestApi {
     /**
      * Retrieves information about a user.
      *
-     * @param userId The user's unique identifier.
+     * @param userId The user's local identifier.
      * @return The [UserInfo] of the specified user.
      */
     public suspend fun getUserInfo(userId: String): UserInfo
@@ -58,7 +58,7 @@ public interface GuestApi {
     /**
      * Retrieves public information about a user.
      *
-     * @param userId The user's unique identifier.
+     * @param userId The user's public identifier.
      * @return The [UserInfo] of the specified user.
      */
     public suspend fun getPublicUserInfo(userId: String): UserInfo
@@ -66,7 +66,7 @@ public interface GuestApi {
     /**
      * Retrieves statistical data for a user.
      *
-     * @param userId The user's unique identifier.
+     * @param userId The user's local identifier.
      * @param fetchCategoryStats Whether to include category-specific statistics.
      * @param fetchActionTypeStats Whether to include action-specific statistics.
      * @return The [UserStats] for the specified user.
@@ -78,9 +78,9 @@ public interface GuestApi {
     ): UserStats
 
     /**
-     * Retrieves public statistical data for a user.
+     * Retrieves public statistical data for a public user given their public identifier.
      *
-     * @param userId The user's unique identifier.
+     * @param userId The user's public identifier.
      * @param fetchCategoryStats Whether to include category-specific statistics.
      * @param fetchActionTypeStats Whether to include action-specific statistics.
      * @return The [UserStats] for the specified user.
@@ -94,7 +94,7 @@ public interface GuestApi {
     /**
      * Retrieves the total number of views a user has on all their segments.
      *
-     * @param userId The user's unique identifier.
+     * @param userId The user's local identifier.
      * @return The total number of views.
      */
     public suspend fun getViewsForUser(userId: String): Int
@@ -102,7 +102,7 @@ public interface GuestApi {
     /**
      * Retrieves the total duration saved by all of a user's submitted segments.
      *
-     * @param userId The user's unique identifier.
+     * @param userId The user's local identifier.
      * @return The total saved duration.
      */
     public suspend fun getSavedTimeForUser(userId: String): Duration
@@ -110,8 +110,8 @@ public interface GuestApi {
     /**
      * Retrieves the current username of a user.
      *
-     * @param userId The user's unique identifier.
-     * @return The username of the user.
+     * @param userId The user's local identifier.
+     * @return The username of the user, or the public identifier if not set.
      */
     public suspend fun getUsername(userId: String): String
 
@@ -243,9 +243,9 @@ public interface GuestApi {
     ): TopUsers
 
     /**
-     * Get total stats
+     * Get total stats.
      *
-     * @param countContributingUsers
+     * @param countContributingUsers Whether to also return the number of contributing users
      */
     public suspend fun getTotalStats(countContributingUsers: Boolean = false): TotalStats
 

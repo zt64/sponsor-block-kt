@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 /**
  * @property userCount Only if countContributingUsers was true
- * @property activeUsers Sum of public install stats from Chrome web-store and Firefox addons store
+ * @property activeUsers Sum of public install stats from Chrome Web Store and Firefox addons store
  * @property apiUsers 48-hour active API users
  * @property viewCount
  * @property totalSubmissions

@@ -44,15 +44,7 @@ public interface UserApi : GuestApi {
      * @param uuid The unique identifier of the segment.
      * @param type The type of vote to apply, e.g., [Vote.UPVOTE] or [Vote.DOWNVOTE].
      */
-    public suspend fun vote(uuid: String, type: Vote)
-
-    /**
-     * Votes to change the category of a segment.
-     *
-     * @param uuid The unique identifier of the segment.
-     * @param category The new category to assign to the segment.
-     */
-    public suspend fun vote(uuid: String, category: Category)
+    public suspend fun vote(uuid: String, videoId: String, type: Vote)
 
     /**
      * Upvotes a segment.
@@ -60,7 +52,7 @@ public interface UserApi : GuestApi {
      * @param userId The local user ID.
      * @param segmentId The unique identifier of the segment.
      */
-    public suspend fun upvoteSegment(userId: String, segmentId: String)
+    public suspend fun upvoteSegment(segmentId: String, videoId: String)
 
     /**
      * Downvotes a segment.
@@ -68,7 +60,7 @@ public interface UserApi : GuestApi {
      * @param userId The local user ID.
      * @param segmentId The unique identifier of the segment.
      */
-    public suspend fun downvoteSegment(userId: String, segmentId: String)
+    public suspend fun downvoteSegment(segmentId: String, videoId: String)
 
     /**
      * Undoes a vote on a segment.
@@ -76,7 +68,7 @@ public interface UserApi : GuestApi {
      * @param userId The local user ID.
      * @param segmentId The unique identifier of the segment.
      */
-    public suspend fun undoVote(userId: String, segmentId: String)
+    public suspend fun unvoteSegment(segmentId: String, videoId: String)
 
     /**
      * Sets the username for the authenticated user.

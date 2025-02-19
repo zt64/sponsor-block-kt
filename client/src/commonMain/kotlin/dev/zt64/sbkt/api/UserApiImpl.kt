@@ -31,32 +31,25 @@ internal class UserApiImpl(private val httpClient: HttpClient, override val user
         }
     }
 
-    override suspend fun vote(uuid: String, type: Vote) {
+    override suspend fun vote(uuid: String, videoId: String, type: Vote) {
         httpClient.post("voteOnSponsorTime") {
             parameter("UUID", uuid)
             parameter("userID", userId)
+            parameter("videoID", videoId)
             parameter("type", type.value)
         }
     }
 
-    override suspend fun vote(uuid: String, category: Category) {
-        httpClient.post("voteOnSponsorTime") {
-            parameter("UUID", uuid)
-            parameter("userID", userId)
-            parameter("category", category.name.lowercase())
-        }
+    override suspend fun upvoteSegment(segmentId: String, videoId: String) {
+        vote(segmentId, videoId, Vote.UPVOTE)
     }
 
-    override suspend fun upvoteSegment(userId: String, segmentId: String) {
-        vote(segmentId, Vote.UPVOTE)
+    override suspend fun downvoteSegment(segmentId: String, videoId: String) {
+        vote(segmentId, videoId, Vote.DOWNVOTE)
     }
 
-    override suspend fun downvoteSegment(userId: String, segmentId: String) {
-        vote(segmentId, Vote.DOWNVOTE)
-    }
-
-    override suspend fun undoVote(userId: String, segmentId: String) {
-        vote(segmentId, Vote.UNDO)
+    override suspend fun unvoteSegment(segmentId: String, videoId: String) {
+        vote(segmentId, videoId, Vote.UNDO)
     }
 
     override suspend fun setUsername(username: String) {

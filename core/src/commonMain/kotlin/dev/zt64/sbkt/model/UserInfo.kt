@@ -32,5 +32,5 @@ public data class UserInfo(
     val reputation: Float,
     val vip: Boolean,
     @SerialName("lastSegmentID")
-    val lastSegmentId: String
+    val lastSegmentId: String?
 )

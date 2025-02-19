@@ -48,10 +48,9 @@ public abstract interface class dev/zt64/sbkt/api/UserApi : dev/zt64/sbkt/api/Gu
 	public abstract fun downvoteSegment (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun getUserId ()Ljava/lang/String;
 	public abstract fun setUsername (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun undoVote (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun unvoteSegment (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun upvoteSegment (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun vote (Ljava/lang/String;Ldev/zt64/sbkt/model/Category;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun vote (Ljava/lang/String;Ldev/zt64/sbkt/model/Vote;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun vote (Ljava/lang/String;Ljava/lang/String;Ldev/zt64/sbkt/model/Vote;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class dev/zt64/sbkt/api/UserApi$DefaultImpls {
@@ -442,9 +441,9 @@ public final class dev/zt64/sbkt/model/SegmentInfo {
 	public final fun component11 ()I
 	public final fun component12 ()Ldev/zt64/sbkt/model/Category;
 	public final fun component13 ()Ldev/zt64/sbkt/model/Service;
-	public final fun component14 ()I
+	public final fun component14 ()F
 	public final fun component15 ()I
-	public final fun component16 ()I
+	public final fun component16 ()F
 	public final fun component17 ()I
 	public final fun component18 ()Ljava/lang/String;
 	public final fun component19 ()Ljava/lang/String;
@@ -466,7 +465,7 @@ public final class dev/zt64/sbkt/model/SegmentInfo {
 	public final fun getHidden ()I
 	public final fun getIncorrectVotes ()I
 	public final fun getLocked ()I
-	public final fun getReputation ()I
+	public final fun getReputation ()F
 	public final fun getService ()Ldev/zt64/sbkt/model/Service;
 	public final fun getShadowHidden ()I
 	public final fun getStartTime ()F
@@ -474,7 +473,7 @@ public final class dev/zt64/sbkt/model/SegmentInfo {
 	public final fun getUserAgent ()Ljava/lang/String;
 	public final fun getUserId ()Ljava/lang/String;
 	public final fun getUuid ()Ljava/lang/String;
-	public final fun getVideoDuration ()I
+	public final fun getVideoDuration ()F
 	public final fun getVideoId ()Ljava/lang/String;
 	public final fun getViews ()I
 	public final fun getVotes ()I
