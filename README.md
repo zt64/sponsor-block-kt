@@ -12,33 +12,55 @@
 ![badge-platform-tvos]
 ![badge-platform-watchos]
 
-Kotlin multiplatform client for the [SponsorBlock API](https://wiki.sponsor.ajay.app/w/API_Docs).
-Using [Ktor](https://github.com/ktorio/ktor) for networking.
+A Kotlin Multiplatform client library for
+the [SponsorBlock API](https://wiki.sponsor.ajay.app/w/API_Docs), powered
+by [Ktor](https://github.com/ktorio/ktor).
 
 ## Setup
 
-```
+Add the following to your `gradle/libs.versions.toml`:
+
+```toml
 [versions]
-sbkt = "x.y.z"
+sbkt = "x.y.z"  # Replace with latest version
 
 [libraries]
 sbkt-client = { module = "dev.zt64.sbkt:client", version.ref = "sbkt" }
+# or
+sbkt-core = { module = "dev.zt64.sbkt:core", version.ref = "sbkt" }
 ```
 
-Make sure to replace `x.y.z` with the latest version and to add a Ktor engine to your dependencies.
-
-## Usage
+Then add the dependency to your module's `build.gradle.kts`:
 
 ```kotlin
-val sb = SponsorBlockClient()
-val videoId = "dQw4w9WgXcQ"
+dependencies {
+    implementation(libs.sbkt.client) // Full implementation with Ktor
+    // or
+    implementation(libs.sbkt.core)   // Core functionality only
+}
+```
 
-val segments = sb.getSegments(videoId)
+> **Note:** You must include a Ktor engine implementation in your dependencies to use the client.
+
+## Quick Start
+
+```kotlin
+// Create an unauthenticated guest client
+val client = SponsorBlockClient()
+
+// Get segments for a video
+val segments = client.getSegments(VIDEO_ID)
+
+// Create a client with a user ID
+val userClient = SponsorBlockClient.user(USER_LOCAL_ID)
+
+// Vote on segments
+userClient.upvoteSegment(segmentUuid, videoId)
 ```
 
 ## License
 
-[GPL v3.0](LICENSE)
+This project is licensed under the [GPL v3.0](LICENSE) license.
 
 [badge-platform-jvm]: http://img.shields.io/badge/-jvm-DB413D.svg?style=flat
 
