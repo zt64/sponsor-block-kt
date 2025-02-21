@@ -16,6 +16,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "sponsor-block-kt"
+rootProject.name = "sponsorblock-kt"
 
 include("core", "client")
