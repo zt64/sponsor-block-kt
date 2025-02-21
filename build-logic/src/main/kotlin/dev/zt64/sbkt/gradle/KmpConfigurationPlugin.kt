@@ -65,6 +65,9 @@ class KmpConfigurationPlugin : Plugin<Project> {
                 configureSubTargets()
             }
 
+            linuxArm64()
+            linuxX64()
+            mingwX64()
             apple()
 
             compilerOptions {
