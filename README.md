@@ -40,7 +40,8 @@ dependencies {
 }
 ```
 
-> **Note:** You must include a Ktor engine implementation in your dependencies to use the client.
+> [!NOTE]
+> A Ktor engine implementation must be included in your dependencies to use the client.
 
 ## Quick Start
 
