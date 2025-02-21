@@ -1,6 +1,6 @@
 # sponsorblock-kt
 
-[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64/sbkt/client)](https://central.sonatype.com/artifact/dev.zt64/sbkt/client)
+[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64.sbkt/client)](https://central.sonatype.com/artifact/dev.zt64/sbkt/client)
 <br>
 ![badge-platform-jvm]
 ![badge-platform-js]
